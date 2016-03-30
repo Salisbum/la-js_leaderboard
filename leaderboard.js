@@ -24,7 +24,27 @@ var gameInfo = function(){
      home_score: 7,
      away_score: 21
    }
- ]
-}
+ ];
+};
 
 // YOUR CODE HERE
+function Team(name, rank, wins, losses) {
+  this.name = name;
+  this.rank = rank;
+  this.wins = wins;
+  this.losses = losses;
+}
+
+var patriots_wins = 0;
+var broncos_wins = 0;
+var colts_wins = 0;
+var steelers_wins = 0;
+
+var patriots_losses = 0;
+var broncos_losses = 0;
+var colts_losses = 0;
+var steelers_losses = 0;
+
+for (var i = 0; i < gameInfo.length; i++) {
+  return this.name;
+}
