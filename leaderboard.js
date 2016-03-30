@@ -68,17 +68,7 @@ var winsLosses = function(array) {
       } else if (array[i].home_score < array[i].away_score && teamObjects[j].name === array[i].away_team) {
         teamObjects[j].wins++;
       }
-
     }
-    //  else(array[i].home_score < array[1].away_score) {
-    //   for (var j = 0; j < teamObjects.length; j++) {
-    //     if (teamObjects[i].name === array[i].away_team) {
-    //       teamObjects[i].wins++;
-    //     } else {
-    //       teamObjects[i].losses++;
-    //     }
-    //   }
-    // }
   };
   return teamObjects;
 };
@@ -90,6 +80,4 @@ var winsLosses = function(array) {
 
 
 
-
-// console.log(teamObjects);
 console.log(winsLosses(gameData));
