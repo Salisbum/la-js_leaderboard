@@ -28,23 +28,30 @@ var gameInfo = function(){
 };
 
 // YOUR CODE HERE
-function Team(name, rank, wins, losses) {
+function team(name, rank, wins, losses) {
   this.name = name;
   this.rank = rank;
   this.wins = wins;
   this.losses = losses;
 }
 
-var patriots_wins = 0;
-var broncos_wins = 0;
-var colts_wins = 0;
-var steelers_wins = 0;
+var teamName = function(array){
+ var teams = [];
+ var uniqueTeams = [];
+ for (i = 0; i < array.length; i++) {
+   teams.push(array[i].home_team);
+   teams.push(array[i].away_team);
+ }
+ for ( var i in teams ){
+   if( uniqueTeams.indexOf(teams[i]) === -1){
+     uniqueTeams.push(teams[i]);
+   }
+ }
+ teams = [];
+ for (i = 0; i < uniqueTeams.length; i++) {
+   teams.push(new team(name = uniqueTeams[i]));
+ }
+ console.log(teams);
+};
 
-var patriots_losses = 0;
-var broncos_losses = 0;
-var colts_losses = 0;
-var steelers_losses = 0;
-
-for (var i = 0; i < gameInfo.length; i++) {
-  return this.name;
-}
+teamName(gameInfo());
