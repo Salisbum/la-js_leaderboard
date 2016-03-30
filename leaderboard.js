@@ -73,11 +73,11 @@ var winsLosses = function(array) {
   return teamObjects;
 };
 
+var teamSort = winsLosses(gameData).slice(0);
+
+teamSort.sort(function(a, b) {
+  return b.wins - a.wins || a.losses - b.losses;
+});
 
 
-
-
-
-
-
-console.log(winsLosses(gameData));
+console.log(teamSort);
