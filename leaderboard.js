@@ -79,5 +79,11 @@ teamSort.sort(function(a, b) {
   return b.wins - a.wins || a.losses - b.losses;
 });
 
+var rank = function() {
+  for (var i = 0; i < teamSort.length; i++) {
+    teamSort[i].rank = i + 1;
+  }
+  return teamSort;
+}
 
-console.log(teamSort);
+console.log(rank(teamSort));
